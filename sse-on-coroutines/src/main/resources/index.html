@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sse Test</title>
+</head>
+<body>
+<div id="content"></div>
+<script>
+    const eventSource = new EventSource("http://localhost:9090/events/stream");
+    eventSource.onmessage = function (ev) {
+        document.getElementById("content").innerHTML += ev.data + '</br>';
+    }
+</script>
+</body>
+</html>
