@@ -1,2 +1,5 @@
 rootProject.name = "articles"
-include("sse-on-coroutines")
+include(
+    "sse-on-coroutines",
+    "kotlin-contracts"
+)
